@@ -25,7 +25,7 @@ public class FilmeDao {
         manager.persist(filme);
     }
 
-    public List<Filme> findAll() {
+    public static List<Filme> findAll() {
         return manager.createQuery("select f from Filme f", Filme.class).getResultList();
     }
 
