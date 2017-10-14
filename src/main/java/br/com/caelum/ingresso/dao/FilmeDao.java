@@ -14,7 +14,7 @@ import java.util.List;
 public class FilmeDao {
 
     @PersistenceContext
-    private static EntityManager manager;
+    private EntityManager manager;
 
 
     public Filme findOne(Integer id) {
@@ -25,7 +25,7 @@ public class FilmeDao {
         manager.persist(filme);
     }
 
-    public static List<Filme> findAll() {
+    public List<Filme> findAll() {
         return manager.createQuery("select f from Filme f", Filme.class).getResultList();
     }
 

@@ -14,9 +14,9 @@ import java.util.List;
 public class SalaDao {
 
     @PersistenceContext
-    private static EntityManager manager;
+    private  EntityManager manager;
 
-    public static Sala findOne(Integer id) {
+    public  Sala findOne(Integer id) {
 
         return manager.find(Sala.class, id);
     }
