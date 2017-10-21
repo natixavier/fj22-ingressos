@@ -19,7 +19,7 @@ public class Filme {
     private String nome;
     private Duration duracao;
     private String genero;
-    
+	private BigDecimal preco;    
     
     
     /**
@@ -29,8 +29,6 @@ public class Filme {
 
     }
     
-	private BigDecimal preco;
-	
     public Filme(String nome, Duration duracao, String genero, BigDecimal preco) {
 		this.nome = nome;
 		this.duracao = duracao;

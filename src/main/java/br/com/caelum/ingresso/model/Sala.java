@@ -63,7 +63,6 @@ public class Sala {
         return lugares;
     }
     
-
     public BigDecimal getPreco() {
         return preco;
     }

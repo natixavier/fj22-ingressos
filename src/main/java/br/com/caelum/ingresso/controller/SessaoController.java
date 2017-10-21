@@ -35,10 +35,9 @@ public class SessaoController {
 
 	@Autowired
 	private FilmeDao filmeDao;
-	
+
 	@Autowired
 	private ImdbClient client;
-	
 
 	@GetMapping("/admin/sessao")
 	public ModelAndView form(@RequestParam("salaId") Integer salaId, SessaoForm form) {
@@ -78,11 +77,10 @@ public class SessaoController {
 
 		Sessao sessao = sessaoDao.findOne(sessaoId);
 		Optional<ImagemCapa> imagemCapa = client.request(sessao.getFilme(), ImagemCapa.class);
-		
-		
+
 		modelAndView.addObject("sessao", sessao);
 		modelAndView.addObject("imagemCapa", imagemCapa.orElse(new ImagemCapa()));
-				
+
 		return modelAndView;
 	}
 
