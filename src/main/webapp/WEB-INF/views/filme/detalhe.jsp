@@ -14,7 +14,7 @@
 
 <ingresso:template>
     <jsp:body>
-		<div class=" col-md-6 col-md-offset-3">
+		<div class="col-md-6 col-md-offset-3">
 	        <h1>${detalhes.titulo}</h1>
 	        <image src="${detalhes.imagem}" />
 	
